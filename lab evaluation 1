@@ -146,5 +146,37 @@ int main()
     return 0;
 }
 
+question 2.
+#include <stdio.h>
+void reverse( int arr[], int start, int end){
+    int temp;
+    if(start<end){
+        temp=arr[end];
+        arr[end]=arr[start];
+        arr[start]=temp;
+    }
+}
+int main(){
+    int n;
+    printf("enter the number of enteries");
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++){
+        printf("enter the elements");
+    scanf("%d",&a[i]);
+    }
+    int start,end;
+    printf("enter the index from you want to reverse the array");
+
+    scanf("%d",&start);
+    if(start>n) printf("error");
+
+    printf("enter the index from you want to end the array");
+    scanf("%d",&end);
+    if(end>n) printf("error");
+    reverse(a,start,end);
+    for (int i=0;i<5;i++)
+    printf("%d",a[i]);
+}
 
  
